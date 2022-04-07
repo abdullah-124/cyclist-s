@@ -9,13 +9,14 @@ const app = express();
 app.use(cors());
 app.use(express.json())
 
-const port = process.env.PORT || 4000;
+const PORT = process.env.PORT || 4000;
+
 app.get("/", (req, res) => {
   res.send("<h1>hello i am cyclist server</h1>");
 });
 
-app.listen(port, () => {
-  console.log(`I am running in port numebr ${port}`);
+app.listen(PORT, () => {
+  console.log(`I am running in port numebr ${PORT}`);
 });
 //MONGODB CONNECTION
 
@@ -111,10 +112,3 @@ async function run() {
 }
 run().catch(console.dir());
 
-app.get("/", (req, res) => {
-  res.send("<h1>hello i am cyclist server</h1>");
-});
-
-app.listen(port, () => {
-  console.log(`I am running in port numebr ${port}`);
-});
